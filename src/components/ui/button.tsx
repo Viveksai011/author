@@ -48,20 +48,15 @@ function Button({
   asChild = false,
   children,
   ...props
-}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants> & { asChild?: boolean; children?: React.ReactElement }) {
-  const buttonClass = cn(buttonVariants({ variant, size, className }));
+}: ButtonPrimitive.Props &
+  VariantProps<typeof buttonVariants> & { asChild?: boolean; children?: React.ReactElement }) {
+  const buttonClass = cn(buttonVariants({ variant, size, className }))
   if (asChild && React.isValidElement(children)) {
     return React.cloneElement(children, {
       className: `${buttonClass} ${(children as any).props.className || ''}`.trim(),
-    });
+    })
   }
-  return (
-    <ButtonPrimitive
-      data-slot="button"
-      className={buttonClass}
-      {...props}
-    />
-  );
+  return <ButtonPrimitive data-slot="button" className={buttonClass} {...props} />
 }
 
 export { Button, buttonVariants }
