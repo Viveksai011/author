@@ -3,9 +3,9 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Love Yourself | Rosara Margarette S.M',
-  description: 'Download Love Yourself, a heartfelt book about healing, courage, and finding love from within.',
-  generator: 'v0.app',
+  title: 'Pratima R. Hegde | Career Coach, Mentor & Author',
+  description:
+    'Empowering professionals to rise with clarity, confidence, and purpose. 1-on-1 coaching, career break transition, and global leadership mentoring.',
   icons: {
     icon: [
       {
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: 'light dark',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: '#f8f7f4' },
+    { media: '(prefers-color-scheme: dark)', color: '#090d16' },
   ],
 }
 
@@ -39,8 +39,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased selection:bg-[#ff5c37] selection:text-white">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
