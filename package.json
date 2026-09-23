@@ -6,9 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "format": "prettier --write .",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "build": "npm run format && npm run lint:fix && next build",
+    "lint": "next lint",
+    "build": "prettier --write . && next build",
     "start": "next start"
   },
   "dependencies": {
